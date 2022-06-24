@@ -1,39 +1,32 @@
 import HelloWorld from './HelloWorld';
 import Button from './Button';
 import SayName from './SayName';
-import Perfil from './Perfil';
+import Noticia from './Noticia';
 
 function App(){
-  const lista_pessoas = [
+  const lista_noticias = [
     {
-      nome: "DORORO",
-      idade: "20"
+      hour: "27/05/2022 13:58",
+      description: "Manutenção do Sistema SUAP acontece nesta sexta-feira(27)"
     },
     {
-      nome: "Hyakkimaru",
-      idade: "30"
+      hour: "25/05/2022 07:50",
+      description: "Estão abertas as escrições para projetos de pesquisa"
     },
     {
-      nome: "Mano",  
-      idade:"25"
-    },
-    {
-      nome: "DORORO",
-      idade: "20"
-    },{
-      nome: "DORORO",
-      idade: "20"
+      hour: "25/05/2022 07:48",
+      description: "Estão abertas as escrições para projetos de ensino"
     },
   ];
 
     return(
       <div>
-        <HelloWorld />
+        <Title />
         
         
 
-        { lista_pessoas.map( (pessoa) => {
-          return <Perfil foto={pessoa.foto} nome={pessoa.nome} idade={pessoa.idade} />
+        {lista_noticias.map((noticia) => {
+          return <Noticia  horario={noticia.hour} desc={noticia.description} />
         } ) }
 
       </div>
